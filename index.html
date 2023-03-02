@@ -30,12 +30,12 @@
         .then((response) => response.json())
         .then(({ results }) => results[0])
         .then(({ name, picture }) => {
-          document.querySelector('#name').innerText = name.first
+          document.querySelector('#name').innerText = "James Fellers"
           document.querySelector(
             '.navbar-brand'
-          ).innerText = `${name.first} ${name.last}`
-          document.title = `${name.first} ${name.last} Personal Site`
-          document.querySelector('#profilepic').src = picture.large
+          ).innerText = "James Fellers"
+          document.title = "James Fellers' Personal Site"
+          document.querySelector('#profilepic').src = "images/hooter.1.png"
         })
     </script>
 
@@ -63,23 +63,23 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#home">Home</a>
+          <ul class="navbar-nav" class="list-group">
+            <li class="nav-item" class="list-group-item">
+              <a class="nav-link" aria-current="page" href="#home">Home<span class="badge">1</span></a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item" class="list-group-item">
               <a class="nav-link" aria-current="page" href="#projects"
-                >Projects</a
+                >Projects<span class="badge">2</span></a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item" class="list-group-item">
               <a class="nav-link" aria-current="page" href="#courses"
-                >Courses</a
+                >Courses<span class="badge">3</span></a
               >
             </li>
-            <li class="nav-item">
+            <li class="nav-item" class="list-group-item">
               <a class="nav-link" aria-current="page" href="#contact"
-                >Contact</a
+                >Contact<span class="badge">4</span></a
               >
             </li>
           </ul>
@@ -90,7 +90,9 @@
       class="container section min-vh-100 d-flex justify-content-center flex-column align-items-center pt-5"
       id="home"
     >
-      <div
+      <div class="panel panel-info">
+        <div class="panel-heading">Profile</div>
+      <div class="panel-body"
         class="rounded-circle border border-3 border-primary p-1 mb-3 mt-0 mt-lg-5"
       >
       <!-- Set Photo Here -->
@@ -100,6 +102,7 @@
           draggable="false"
           id="profilepic"
         />
+      </div>
       </div>
       <div class="row mx-auto">
         <h4 class="h1 font-weight-bold mx-auto text-center">
